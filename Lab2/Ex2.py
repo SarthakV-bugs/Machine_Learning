@@ -76,6 +76,7 @@ plt.show()
 # Drop the unwanted columns
 columns_drop = ["Longitude", "Latitude"]
 subset = california_housing.frame.iloc[indices].drop(columns=columns_drop)
+
 # Quantize the target and keep the midpoint for each interval
 subset["MedHouseVal"] = pd.qcut(subset["MedHouseVal"], 6, retbins=False)
 subset["MedHouseVal"] = subset["MedHouseVal"].apply(lambda x: x.mid)

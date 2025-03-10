@@ -38,10 +38,10 @@ def main():
     model = LinearRegression()
 
     #train the model
-    model.fit(x_train, y_train)
+    model.fit(x_train_scaled, y_train)
 
     #prediction on a test set
-    y_pred = model.predict(x_test)
+    y_pred = model.predict(x_test_scaled)
 
     #compute the r2 score
 

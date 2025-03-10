@@ -237,7 +237,7 @@ def train_model(filepath, target_column, columns_to_drop, alpha=0.01, iterations
 
 
 if __name__ == '__main__':
-    filepath = r"/Admission_Predict_Ver1.1.csv"
+    filepath = "/home/ibab/PycharmProjects/ML-Lab/Lab4/california_housing.csv"
     columns_to_drop = ["Serial No.","Target"]
     target_column = "Target"
 

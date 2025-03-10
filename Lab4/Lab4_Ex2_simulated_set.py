@@ -189,6 +189,10 @@ def train_model(filepath,target_column,columns_to_drop,alpha = 0.01,iterations=1
             # Print every 100 iterations
             print(f"Iteration {i}: Cost = {cost_f}")
 
+        if i > 0 and abs(cost_history[-1] - cost_history[-2]) < 1e-3:
+            print(f"Converged at iteration {i}")
+            break
+
     print("Final theta values:", theta)
 
     plotting(cost_history,iterations)
@@ -201,7 +205,7 @@ def train_model(filepath,target_column,columns_to_drop,alpha = 0.01,iterations=1
     print(f"r2score: {r2score:.2f}")
 
     '''r2 score computed by my implementation for Disease-score_fluct target comes to 0.52,
-    r2 score computed for Disease_score comes to 1.00'''
+    r2 score computed for Disease_score_fluct comes to 1.00'''
 
     return theta
 
@@ -213,7 +217,7 @@ def train_model(filepath,target_column,columns_to_drop,alpha = 0.01,iterations=1
 
 if __name__ == '__main__':
 
-    filepath = r"/simulated_data_multiple_linear_regression_for_ML.csv"
+    filepath = "/home/ibab/PycharmProjects/ML-Lab/Lab4/simulated_data_multiple_linear_regression_for_ML.csv"
     columns_to_drop = ["disease_score", "disease_score_fluct"]
     target_column = "disease_score_fluct"
 

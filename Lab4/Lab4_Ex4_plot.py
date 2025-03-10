@@ -8,7 +8,7 @@ from sklearn.linear_model import LinearRegression
 
 def load_data():
     # Read the CSV file
-    df = pd.read_csv(r"/simulated_data_multiple_linear_regression_for_ML.csv")
+    df = pd.read_csv("/home/ibab/PycharmProjects/ML-Lab/Lab4/simulated_data_multiple_linear_regression_for_ML.csv")
 
     # Extract features and target variables
     x = df["age"].values.reshape(-1, 1)

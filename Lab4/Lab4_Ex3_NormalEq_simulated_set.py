@@ -249,7 +249,7 @@ def train_model(filepath,target_column,columns_to_drop,alpha = 0.01,iterations=1
 
 if __name__ == '__main__':
 
-    filepath = r"/simulated_data_multiple_linear_regression_for_ML.csv"
+    filepath = "/home/ibab/PycharmProjects/ML-Lab/Lab4/Lab4_Ex2_simulated_set.py"
     columns_to_drop = ["disease_score", "disease_score_fluct"]
     target_column = "disease_score_fluct"
 

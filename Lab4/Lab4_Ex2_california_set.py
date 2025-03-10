@@ -198,7 +198,7 @@ def train_model(filepath,target_column,columns_to_drop,alpha = 0.001,iterations=
 
     #compute the r2 score
     r2score = r2_score(y_test,np.array(y_pred))
-    print(f"r2score: {r2score:.2f}")
+    print(f" r2score: {r2score:.2f}")
 
     '''r2 score computed by my implementation for target house price comes to 0.58, r2 score computed by scikit model
     is  0.63'''
@@ -217,11 +217,12 @@ def train_model(filepath,target_column,columns_to_drop,alpha = 0.001,iterations=
 
 if __name__ == '__main__':
 
-    filepath = r"/california_housing.csv"
+    filepath = "/home/ibab/PycharmProjects/ML-Lab/Lab4/california_housing.csv"
     columns_to_drop = "target"
     target_column = "target"
 
     f_theta  = train_model(filepath, target_column,columns_to_drop, alpha=0.01, iterations=1000)
+
 
 
 

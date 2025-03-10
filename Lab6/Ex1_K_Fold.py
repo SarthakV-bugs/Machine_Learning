@@ -93,7 +93,7 @@ def r2_score(y_true, y_pred):
     return 1 - (ss_residual / ss_total)
 
 
-# Usage
+
 if __name__ == "__main__":
     x, y = load_data("/home/ibab/PycharmProjects/ML-Lab/Lab4/simulated_data_multiple_linear_regression_for_ML.csv",
                      "disease_score_fluct",
