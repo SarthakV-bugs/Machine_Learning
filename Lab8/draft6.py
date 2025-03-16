@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 # Load Breast Cancer dataset
 def lo_data():
-    df = pd.read_csv("/home/ibab/PycharmProjects/ML-Lab/Breast_cancer_wisconcsin.csv")
+    df = pd.read_csv("/ML_PRACTICE/Breast_cancer_wisconcsin.csv")
     x = df.drop(columns=["id", "diagnosis", "Unnamed: 32"])  # Drop non-features columns
     y = df["diagnosis"]
     le = LabelEncoder()

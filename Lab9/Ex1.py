@@ -19,7 +19,7 @@ def load_data():
     return X, y
 
 def load_data2():
-    data = pd.read_csv("/home/ibab/PycharmProjects/ML-Lab/Breast_cancer_wisconcsin.csv")
+    data = pd.read_csv("/ML_PRACTICE/Breast_cancer_wisconcsin.csv")
     X = data.drop(columns=["diagnosis", "id", "Unnamed: 32"]).values
     data["diagnosis_binary"] = data["diagnosis"].map({'M': 1, 'B': 0}) #transforms diagnosis column into a binary format
     y = data["diagnosis_binary"].values
