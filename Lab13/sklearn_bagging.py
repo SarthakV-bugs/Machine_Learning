@@ -49,8 +49,7 @@ print(f"\n")
 
 
 
-
-                                                 #####  Bagging for Classification (Iris dataset)   #####
+#####  Bagging for Classification (Iris dataset)   #####
 iris = load_iris()
 X_iris = iris.data
 y_iris = iris.target  # Categorical target
