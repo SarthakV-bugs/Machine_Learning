@@ -1,0 +1,9 @@
+Best Model: XGBoost
+              precision    recall  f1-score   support
+
+     Class 0       0.71      1.00      0.83       167
+     Class 1       1.00      0.03      0.06        69
+
+    accuracy                           0.72       236
+   macro avg       0.86      0.51      0.44       236
+weighted avg       0.80      0.72      0.61       236

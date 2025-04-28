@@ -1,0 +1,7 @@
+XGBoost: 0.7161
+Random Forest: 0.6907
+Logistic Regression: 0.6780
+SVM: 0.7076
+KNN: 0.7076
+Gradient Boosting: 0.7076
+Decision Tree: 0.6737
