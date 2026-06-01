@@ -155,7 +155,7 @@ from sklearn.metrics import r2_score
 ### K-fold cross-validation from scratch
 
 # Step 1: Load dataset
-data = pd.read_csv("simulated_data_multiple_linear_regression_for_ML.csv")
+data = pd.read_csv("../ML_PRACTICE/simulated_data_multiple_linear_regression_for_ML.csv")
 X = data.drop(columns=["disease_score_fluct", "disease_score"])
 y = data["disease_score_fluct"]
 
@@ -256,6 +256,10 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+
+
+
 import random
 import numpy as np
 import pandas as pd
@@ -266,7 +270,7 @@ from sklearn.metrics import r2_score
 from sklearn.feature_selection import RFE
 
 # Step 1: Load dataset
-data = pd.read_csv("simulated_data_multiple_linear_regression_for_ML.csv")
+data = pd.read_csv("../ML_PRACTICE/simulated_data_multiple_linear_regression_for_ML.csv")
 X = data.drop(columns=["disease_score_fluct", "disease_score"])
 y = data["disease_score_fluct"]
 

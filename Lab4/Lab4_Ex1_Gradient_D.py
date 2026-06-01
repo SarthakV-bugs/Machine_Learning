@@ -17,10 +17,16 @@ def load_data():
 
     x = df.drop(columns=["disease_score", "disease_score_fluct"])
 
+    # for i in range(len(x)):
+    #     print(x.iloc[i])
+
     #create x_ones
     x_ones = []
-    for i in range(len(x)): #iterated over the rows
+    for _ in range(len(x)): #iterated over the rows
         x_ones.append(1)
+
+    # x_ones = np.ones((len(x), 1), dtype=float)
+    # print(x_ones.flatten().shape)
 
     #converted the list into a df and concatenated.
     x_ones_df = pd.DataFrame({'x_ones': x_ones})
@@ -30,7 +36,7 @@ def load_data():
     # print(type(x))
     # print(len(x))
     # Normalize the data (scaling features to mean 0 and variance 1)
-    mean = np.mean(x[:, 1:], axis=0)  # Compute the mean of each feature (excluding the intercept)
+    mean = np.mean(x[:, 1:], axis=0)  # Compute the mean of each feature (excluding the intercept), of the entire design matrix x
     std_dev = np.std(x[:, 1:], axis=0)  # Compute the standard deviation of each feature (excluding the intercept)
 
     # Normalize each feature (excluding the first column which is the intercept term)
@@ -45,7 +51,7 @@ def initialize_para(x):
 
     theta = []
     random.seed(42)
-    for i in x[0,:]: #iterated over the cols
+    for _ in x[0,:]: #iterated over the cols
         x_theta = random.uniform(a=0,b=0.1)
         theta.append(x_theta)
     return theta
@@ -54,12 +60,12 @@ def initialize_para(x):
 def hypo(x,theta):
 
     #my code using array manipulation
-    h_xes = []
+    h_xes = [] #predicted values for each samples
     for i in range(len(x)):
         h_x = 0
-        for j in range(len(theta)):
-            if j >= len(x[0,:]): #to prevent out of bound error, no of columns.
-                break
+        for j in range(len(theta)): #len of theta = len of the columns in the matrix
+            # if j >= len(x[0,:]): #to prevent out of bound error, no of columns.
+            #     break
             h_x += theta[j] * x[i][j]
         h_xes.append(h_x)
     return h_xes
@@ -73,7 +79,7 @@ def hypo(x,theta):
     # return pd.Series(h_xes)
 
 def cost(h_xes,y1,y2):
-    sse = 0
+    sse = 0 #sum of squared errors
     for j in range(len(h_xes)):
         err = (h_xes[j] - y1[j]) #error output
         sse += err**2 #squared error

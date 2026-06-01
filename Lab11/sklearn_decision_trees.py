@@ -21,7 +21,7 @@ import seaborn as sns
 ''' DECISION TREE REGRESSION MODEL FOR SIMULATED DATASET'''
 #Step1: load the dataset
 
-simulated_data = pd.read_csv("simulated_data_multiple_linear_regression_for_ML.csv")
+simulated_data = pd.read_csv("../ML_PRACTICE/simulated_data_multiple_linear_regression_for_ML.csv")
 print(simulated_data)
 # print(simulated_data.keys()) #Index(['age', 'BMI', 'BP', 'blood_sugar', 'Gender', 'disease_score','disease_score_fluct'],dtype='object')
 
@@ -96,7 +96,7 @@ print(f"Mean R² Score: {np.mean(cv_scores):.4f}")
 
 #Performing some EDA
 #loading the dataset
-data_cancer = pd.read_csv("Breast_cancer_wisconcsin.csv")
+data_cancer = pd.read_csv("../ML_PRACTICE/Breast_cancer_wisconcsin.csv")
 print(data_cancer.keys())
 
 #Know the data
@@ -122,7 +122,7 @@ print(data_cancer['diagnosis'].value_counts()) #returns the count of classes
 
 
 # Load Cancer Dataset
-data_cancer = pd.read_csv("Breast_cancer_wisconcsin.csv")
+data_cancer = pd.read_csv("../ML_PRACTICE/Breast_cancer_wisconcsin.csv")
 
 # Drop Unnecessary Columns
 x1 = data_cancer.drop(columns=["Unnamed: 32","id", "diagnosis"])

@@ -1,0 +1,17 @@
+# IDE
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Archives
+*.zip
+
+# CIFAR datasets
+cifar10img/
+cifar-10-python/
+
+# Virtual environments
+.venv/
+venv/
